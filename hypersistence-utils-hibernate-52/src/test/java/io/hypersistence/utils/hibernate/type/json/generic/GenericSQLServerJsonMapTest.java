@@ -73,7 +73,7 @@ public class GenericSQLServerJsonMapTest extends AbstractSQLServerIntegrationTes
         private String isbn;
 
         @Type(type = "json")
-        @Column(columnDefinition = "NVARCHAR(1000) CHECK(ISJSON(properties) = 1)")
+        @Column(columnDefinition = "json")
         private Map<String, String> properties = new HashMap<>();
 
         public String getIsbn() {
